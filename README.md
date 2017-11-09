@@ -52,13 +52,13 @@ Maven Central 则是由sonatype.org维护的Maven仓库</br>
 Project: Community Support - Open Source Project Repository Hosting</br>
 Issue Type: New Project</br>
 Summary: 你的 library名称的概要，比如The Base Library。</br>
-Group Id: 输入根GROUP_ID，比如，cn.com.bluemoon 。一旦批准之后，每个以cn.com.bluemoon</br>
-开始的library都允许被上传到仓库，比如cn.com.bluemoon.lib。</br>
+Group Id: 输入根GROUP_ID，比如，com.github.eric0liang 。一旦批准之后，每个以com.github.eric0liang</br>
+开始的library都允许被上传到仓库，比如com.github.eric0liang.lib。</br>
 Project URL: 输入任意一个你想贡献的library的URL，比如， https://github.com/Eric0liang/cardocr。</br>
 SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git。</br>
 <img src="https://github.com/Eric0liang/Android-library/blob/master/5.png" />
 <img src="https://github.com/Eric0liang/Android-library/blob/master/7.png" />
-点击Create后就是漫长的审核时间，大概一周时间左右申请通过后，就有权限把library分享到Maven Central
+点击Create后就是等待的审核时间，大概1个小时左右申请通过后，就有权限把library分享到Maven Central
 
 <img src="https://github.com/Eric0liang/Android-library/blob/master/8.png" />
 
