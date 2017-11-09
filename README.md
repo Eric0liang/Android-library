@@ -19,15 +19,15 @@
 到这里Jcenter的Bintray账户的注册就完成了，并创建了Package。
 
 ## 第一部分：为MavenCentral在Sonatype上创建账号
-需要在Sonatype Dashboard上申请个Issue权限，它的作用就是允许你上次匹配Maven Central提供的GROUP_ID的library
-创建的帐号登录，然后点击顶部菜单的Create，填写信息如下：
-Project: Community Support - Open Source Project Repository Hosting
-Issue Type: New Project
-Summary: 你的 library名称的概要，比如The Base Library。
-Group Id: 输入根GROUP_ID，比如，cn.com.bluemoon 。一旦批准之后，每个以cn.com.bluemoon
-开始的library都允许被上传到仓库，比如cn.com.bluemoon.lib。
-Project URL: 输入任意一个你想贡献的library的URL，比如， https://github.com/Eric0liang/cardocr。
-SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git。
+需要在Sonatype Dashboard上申请个Issue权限，它的作用就是允许你上次匹配Maven Central提供的GROUP_ID的library</br>
+创建的帐号登录，然后点击顶部菜单的Create，填写信息如下：</br>
+Project: Community Support - Open Source Project Repository Hosting</br>
+Issue Type: New Project</br>
+Summary: 你的 library名称的概要，比如The Base Library。</br>
+Group Id: 输入根GROUP_ID，比如，cn.com.bluemoon 。一旦批准之后，每个以cn.com.bluemoon</br>
+开始的library都允许被上传到仓库，比如cn.com.bluemoon.lib。</br>
+Project URL: 输入任意一个你想贡献的library的URL，比如， https://github.com/Eric0liang/cardocr。</br>
+SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git。</br>
 <img src="https://github.com/Eric0liang/Android-library/blob/master/5.png" />
 <img src="https://github.com/Eric0liang/Android-library/blob/master/6.png" />
 <img src="https://github.com/Eric0liang/Android-library/blob/master/7.png" />
