@@ -14,7 +14,7 @@
 
 <img src="https://github.com/Eric0liang/Android-library/blob/master/3.png" width="500px"/>
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/4.png" width="500px"/>
+<img src="https://github.com/Eric0liang/Android-library/blob/master/4.png" />
 
 ### Gradle
 ```groovy
