@@ -8,25 +8,14 @@
 
 <img src="https://github.com/Eric0liang/Android-library/blob/master/1.png" width="600px"/>
 
-第二步：，。
-```groovy
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    
-    <meta-data
-            android:name="OCR_APP_KEY"
-            android:value="腾讯优图申请" />
-    <meta-data
-            android:name="OCR_SECRET_ID"
-            android:value="腾讯优图申请" />
-    <meta-data
-            android:name="OCR_SECRET_KEY"
-            android:value="腾讯优图申请" />
-            
-```
+第二步：点击Add New Package，为library创建一个新的package
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/2.png" width="600px"/>
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/3.png" width="600px"/>
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/4.png" width="600px"/>
+
 ### Gradle
 ```groovy
     allprojects {
