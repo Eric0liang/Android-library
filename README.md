@@ -35,6 +35,10 @@ SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git�
 
 <img src="https://github.com/Eric0liang/Android-library/blob/master/8.png" />
 
+最后把Sonatype OSS用户名绑定到Bintray
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/9.png" />
+
 ```groovy
     allprojects {
         jcenter()
