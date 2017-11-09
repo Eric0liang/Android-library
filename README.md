@@ -1,6 +1,34 @@
 # 如何使用Android Studio把自己的Android library分享到jCenter和Maven Central
 
-这个库的底层是使用腾讯优图云平台识别技术，识别速度大概4秒左右 [`http://open.youtu.qq.com/`](http://open.youtu.qq.com/) 
+## jCenter
+jcenter是一个由 bintray.com维护的Maven仓库</br>
+我们在build.gradle文件中如下定义仓库，就能使用jcenter了：
+
+    allprojects {
+        repositories {
+            jcenter()
+        }
+    }
+    
+## Maven Central
+Maven Central 则是由sonatype.org维护的Maven仓库</br>
+同样在build.gradle文件中如下定义仓库
+```groovy
+    allprojects {
+        repositories {
+            mavenCentral()
+        }
+    }
+ ```
+不管是jcenter还是Maven Central ，两者都是Maven仓库</br>
+新版本的Android Studio创建一个项目，jcenter()自动被定义，而不是mavenCentral()，由于Maven Central的最大问题是对开发者不够友好，
+上传library异常困难，而使用jcenter的好处多：
+* jcenter是全世界最大的Java仓库
+* 上传library到仓库很简单，不需要像在 Maven Central上做很多复杂的事情
+* 友好的用户界面
+* jcenter一个按钮就能实现可以将library上传到Maven Central</br>
+
+所以说使用jcenter是明智之举
 
 ## 第一部分：在bintray上创建package
 
@@ -29,11 +57,14 @@ Group Id: 输入根GROUP_ID，比如，cn.com.bluemoon 。一旦批准之后，�
 Project URL: 输入任意一个你想贡献的library的URL，比如， https://github.com/Eric0liang/cardocr。</br>
 SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git。</br>
 <img src="https://github.com/Eric0liang/Android-library/blob/master/5.png" />
-<img src="https://github.com/Eric0liang/Android-library/blob/master/6.png" />
 <img src="https://github.com/Eric0liang/Android-library/blob/master/7.png" />
 点击Create后就是漫长的审核时间，大概一周时间左右申请通过后，就有权限把library分享到Maven Central
 
 <img src="https://github.com/Eric0liang/Android-library/blob/master/8.png" />
+
+最后把Sonatype OSS用户名绑定到Bintray
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/9.png" />
 
 ```groovy
     allprojects {
