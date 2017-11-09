@@ -6,6 +6,8 @@
 
 第一步：在[bintray.com](https://bintray.com)上注册账号(有GitHub账号可以直接登录)，完成注册之后，登录网站，然后点击Add New Repository
 
+<img src="https://github.com/Eric0liang/Android-library/blob/master/1.png" width="400px"/>
+
 第二步：，。
 ```groovy
     <uses-permission android:name="android.permission.CAMERA"/>
