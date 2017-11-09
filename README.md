@@ -112,6 +112,7 @@ sub   rsa2048 2017-11-09 [E] [有效至：2019-11-09]
 
 Update完密钥后就可以开启自动签名功能，配置就完成了
 <img src="https://github.com/Eric0liang/Android-library/blob/master/12.png" />
+
 <img src="https://github.com/Eric0liang/Android-library/blob/master/13.png" />
 
 
