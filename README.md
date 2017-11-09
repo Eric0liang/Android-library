@@ -67,7 +67,7 @@ SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git�
 <img src="https://github.com/Eric0liang/Android-library/blob/master/9.png" />
 
 
-## 第三部分：启用bintray里的自动注册
+## 第三部分：启用bintray里的自动签名
 
 打开终端输入（如果你用的是windows，请安装cygwin环境）
 注：gpg即GNU Privacy Guard，它是加密工具PGP（Pretty Good Privacy ）的非商业化版本，用于对Email、文件及其他数据的收发进行加密与验证，确保通信数据的可靠性和真实性
@@ -81,11 +81,12 @@ SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git�
     gpg --gen-key
 ```
 最终公钥和私钥已经生成并经签名。
-
+```groovy
 pub   rsa2048 2017-11-09 [SC] [有效至：2019-11-09]
       8BE15DECD54188B1A5E0BCAF1D32355F7D533BF6
 uid                      yourname <yourmail@email.com>
 sub   rsa2048 2017-11-09 [E] [有效至：2019-11-09]
+```
 
 ### 上传至公钥服务器
 现在你需要把key上传到keyserver。为此，请将PUBLIC_KEY_ID替换成自己的keyId,譬如8BE15DECD54188B1A5E0BCAF1D32355F7D533BF6
@@ -109,10 +110,11 @@ sub   rsa2048 2017-11-09 [E] [有效至：2019-11-09]
 <img src="https://github.com/Eric0liang/Android-library/blob/master/10.png" />
 <img src="https://github.com/Eric0liang/Android-library/blob/master/11.png" />
 
-作者：宇宙最强架构师
-链接：http://www.jianshu.com/p/e5a1ea6d8812
-來源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+Update完密钥后就可以开启自动签名功能，配置就完成了
+<img src="https://github.com/Eric0liang/Android-library/blob/master/12.png" />
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/13.png" />
+
 
 ```groovy
     compile 'cn.com.bluemoon:lib_cardocr:1.0.2'
