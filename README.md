@@ -46,7 +46,7 @@ Maven Central 则是由sonatype.org维护的Maven仓库</br>
 
 到这里Jcenter的Bintray账户的注册就完成了，并创建了Package。
 
-## 第一部分：为MavenCentral在Sonatype上创建账号
+## 第二部分：为MavenCentral在Sonatype上创建账号
 需要在Sonatype Dashboard上申请个Issue权限，它的作用就是允许你上次匹配Maven Central提供的GROUP_ID的library</br>
 创建的帐号登录，然后点击顶部菜单的Create，填写信息如下：</br>
 Project: Community Support - Open Source Project Repository Hosting</br>
@@ -110,10 +110,21 @@ sub   rsa2048 2017-11-09 [E] [有效至：2019-11-09]
 <img src="https://github.com/Eric0liang/Android-library/blob/master/10.png" />
 <img src="https://github.com/Eric0liang/Android-library/blob/master/11.png" />
 
-Update完密钥后就可以开启自动签名功能，配置就完成了
+Update完密钥后就可以开启自动签名功能
 <img src="https://github.com/Eric0liang/Android-library/blob/master/12.png" />
 
 <img src="https://github.com/Eric0liang/Android-library/blob/master/13.png" />
+
+点击Update保存这些步骤。完成。现在只需点击一下，每个上传到我们Maven仓库的东西都会自动签名并做好转向Maven Central 。
+请注意这是一次性的操作，以后创建的每一个library都要应用此操作。
+Bintray和Maven Central都已经准备好了！！！！
+
+
+## 第四部分：创建Android Studio项目
+Application Module用于展示库的用法</br>
+Library Module是library的源代码，也就是要发布到jcenter的library
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/14.png" />
 
 
 ```groovy
