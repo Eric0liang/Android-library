@@ -10,11 +10,11 @@
 
 第二步：点击Add New Package，为library创建一个新的package
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/2.png" width="600px"/>
+<img src="https://github.com/Eric0liang/Android-library/blob/master/2.png"/>
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/3.png" width="600px"/>
+<img src="https://github.com/Eric0liang/Android-library/blob/master/3.png" width="500px"/>
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/4.png" width="600px"/>
+<img src="https://github.com/Eric0liang/Android-library/blob/master/4.png" />
 
 ### Gradle
 ```groovy
