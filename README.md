@@ -31,6 +31,9 @@ SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git�
 <img src="https://github.com/Eric0liang/Android-library/blob/master/5.png" />
 <img src="https://github.com/Eric0liang/Android-library/blob/master/6.png" />
 <img src="https://github.com/Eric0liang/Android-library/blob/master/7.png" />
+点击Create后就是漫长的审核时间，大概一周时间左右申请通过后，就有权限把library分享到Maven Central
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/8.png" />
 
 ```groovy
     allprojects {
