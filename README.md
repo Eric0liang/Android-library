@@ -66,13 +66,53 @@ SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git�
 
 <img src="https://github.com/Eric0liang/Android-library/blob/master/9.png" />
 
+
+## 第三部分：启用bintray里的自动注册
+
+打开终端输入（如果你用的是windows，请安装cygwin环境）
+注：gpg即GNU Privacy Guard，它是加密工具PGP（Pretty Good Privacy ）的非商业化版本，用于对Email、文件及其他数据的收发进行加密与验证，确保通信数据的可靠性和真实性
+### gpg安装
 ```groovy
-    allprojects {
-        jcenter()
-        maven { url "https://raw.githubusercontent.com/Eric0liang/lib_cardocr/master" }
-    }
-    
+    brew install gpg
 ```
+### 生成key
+有几个必填项。部分可以采用默认值，但是某些项需要你自己输入恰当的内容，比如，你的真实名字，密码 等等。
+```groovy
+    gpg --gen-key
+```
+最终公钥和私钥已经生成并经签名。
+
+pub   rsa2048 2017-11-09 [SC] [有效至：2019-11-09]
+      8BE15DECD54188B1A5E0BCAF1D32355F7D533BF6
+uid                      yourname <yourmail@email.com>
+sub   rsa2048 2017-11-09 [E] [有效至：2019-11-09]
+
+### 上传至公钥服务器
+现在你需要把key上传到keyserver。为此，请将PUBLIC_KEY_ID替换成自己的keyId,譬如8BE15DECD54188B1A5E0BCAF1D32355F7D533BF6
+```groovy
+    gpg --keyserver hkp://pool.sks-keyservers.net --send-keys PUBLIC_KEY_ID
+```
+
+在发布过程中我遇到了 gpg: keyserver send failed: No route to host的错误，解决方法是多试几个地址，下面是几个候选地址：
+
+* p80.pool.sks-keyservers.net:80
+* pool.sks-keyservers.net
+* ha.pool.sks-keyservers.net
+
+### 导出公钥和私钥
+
+    gpg -a --export yourmail@email.com > public_key_sender.asc
+    gpg -a --export-secret-key yourmail@email.com > private_key_sender.asc
+    
+把刚才导出的公钥和私钥粘贴进去，包括虚线的两行文本，然后点击 Update
+
+<img src="https://github.com/Eric0liang/Android-library/blob/master/10.png" />
+<img src="https://github.com/Eric0liang/Android-library/blob/master/11.png" />
+
+作者：宇宙最强架构师
+链接：http://www.jianshu.com/p/e5a1ea6d8812
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 ```groovy
     compile 'cn.com.bluemoon:lib_cardocr:1.0.2'
