@@ -1,4 +1,4 @@
-# cardocr 身份证、银行卡识别
+# 如何使用Android Studio把自己的Android library分享到jCenter和Maven Central
 
 这个库的底层是使用腾讯优图云平台识别技术，识别速度大概4秒左右 [`http://open.youtu.qq.com/`](http://open.youtu.qq.com/) 
 
