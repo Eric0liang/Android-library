@@ -11,7 +11,7 @@ jcenter是一个由 bintray.com维护的Maven仓库</br>
     }
     
 ## Maven Central
-Maven Central 则是由sonatype.org维护的Maven仓库
+Maven Central 则是由sonatype.org维护的Maven仓库</br>
 同样在build.gradle文件中如下定义仓库
 ```groovy
     allprojects {
@@ -27,6 +27,7 @@ Maven Central 则是由sonatype.org维护的Maven仓库
 * 上传library到仓库很简单，不需要像在 Maven Central上做很多复杂的事情
 * 友好的用户界面
 * jcenter一个按钮就能实现可以将library上传到Maven Central</br>
+
 所以说使用jcenter是明智之举
 
 ## 第一部分：在bintray上创建package
