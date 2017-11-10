@@ -187,10 +187,14 @@ compile 'com.github.eric0liang:lib_cardocr:0.9.3'
 ```groovy
 gradle bintrayUpload
 ```
+上传成功后在bintray查看文件
+<img src="images/19.png" />
+点击Add to Jcenter的按钮发布到Jcenter(没有出现按钮就稍等一下)
+<img src="images/17.png" />
+发布后等待审核，审核通过后Linked To会看到一些变化
+<img src="images/18.png" />
 
-在bintray查看上传的文件
-<img src="images/15.png" />
-
+Add to Jcenter
 
 ## demo apk下载地址: 
 [点击下载](https://github.com/Eric0liang/cardocr/blob/master/app-debug.apk)
