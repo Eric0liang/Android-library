@@ -47,7 +47,7 @@ Maven Central 则是由sonatype.org维护的Maven仓库</br>
 到这里Jcenter的Bintray账户的注册就完成了，并创建了Package。
 
 ## 第二部分：为MavenCentral在Sonatype上创建账号
-需要在Sonatype Dashboard上申请个Issue权限，它的作用就是允许你上次匹配Maven Central提供的GROUP_ID的library</br>
+需要在[Sonatype Dashboard](https://issues.sonatype.org/secure/Dashboard.jspa)上申请个Issue权限，它的作用就是允许你上次匹配Maven Central提供的GROUP_ID的library</br>
 创建的帐号登录，然后点击顶部菜单的Create，填写信息如下：</br>
 Project: Community Support - Open Source Project Repository Hosting</br>
 Issue Type: New Project</br>
@@ -194,7 +194,16 @@ gradle bintrayUpload
 发布后等待审核，审核通过后Linked To会看到一些变化
 <img src="images/17.png" />
 
-Add to Jcenter
+到这里，任何开发者都可以使用jcenter() repository 外加一行gradle脚本来使用我们的library了
+
+    compile 'com.github.eric0liang:lib_cardocr:0.9.3'
+
+在[Jcenter](http://jcenter.bintray.com)上检查library，在本例中就是[http://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/](http://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/)
+<img src="images/19.png" />
+
+请注意链接到jcenter是一个只需做一次的操作。如果你对你的package做了任何修改，比如上传了一个新版本的binary，删除了旧版本的binary等等，这些改变也会影响到jcenter。不过毕竟你自己的仓库和jcenter在不同的地方，所以需要等待2－3分钟让jcenter同步这些修改。
+
+同时注意，如果你决定删除整个package，放在jcenter仓库上的library不会被删除。它们会像僵尸一样的存在，没有人再能删除它了。因此我建议，如果你想删除整个package，请在移除package之前先在网页上删除每一个版本。
 
 ## demo apk下载地址: 
 [点击下载](https://github.com/Eric0liang/cardocr/blob/master/app-debug.apk)
