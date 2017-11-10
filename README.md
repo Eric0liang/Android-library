@@ -34,15 +34,15 @@ Maven Central 则是由sonatype.org维护的Maven仓库</br>
 
 第一步：在[bintray.com](https://bintray.com)上注册账号(有GitHub账号可以直接登录)，完成注册之后，登录网站，然后点击Add New Repository
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/1.png" width="600px"/>
+<img src="images/1.png" width="600px"/>
 
 第二步：点击Add New Package，为library创建一个新的package
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/2.png"/>
+<img src="images/2.png"/>
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/3.png" width="500px"/>
+<img src="images/3.png" width="500px"/>
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/4.png" />
+<img src="images/4.png" />
 
 到这里Jcenter的Bintray账户的注册就完成了，并创建了Package。
 
@@ -56,15 +56,15 @@ Group Id: 输入根GROUP_ID，比如，com.github.eric0liang 。一旦批准之�
 开始的library都允许被上传到仓库，比如com.github.eric0liang.lib。</br>
 Project URL: 输入任意一个你想贡献的library的URL，比如， https://github.com/Eric0liang/cardocr。</br>
 SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git。</br>
-<img src="https://github.com/Eric0liang/Android-library/blob/master/5.png" />
-<img src="https://github.com/Eric0liang/Android-library/blob/master/7.png" />
+<img src="images/5.png" />
+<img src="images/7.png" />
 点击Create后就是等待的审核时间，大概1个小时左右申请通过后，就有权限把library分享到Maven Central
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/8.png" />
+<img src="images/8.png" />
 
 最后把Sonatype OSS用户名绑定到Bintray
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/9.png" />
+<img src="images/9.png" />
 
 
 ## 第三部分：启用bintray里的自动签名
@@ -107,13 +107,13 @@ sub   rsa2048 2017-11-09 [E] [有效至：2019-11-09]
     
 把刚才导出的公钥和私钥粘贴进去，包括虚线的两行文本，然后点击 Update
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/10.png" />
-<img src="https://github.com/Eric0liang/Android-library/blob/master/11.png" />
+<img src="images/10.png" />
+<img src="images/11.png" />
 
 Update完密钥后就可以开启自动签名功能
-<img src="https://github.com/Eric0liang/Android-library/blob/master/12.png" />
+<img src="images/12.png" />
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/13.png" />
+<img src="images/13.png" />
 
 点击Update保存这些步骤。完成。现在只需点击一下，每个上传到我们Maven仓库的东西都会自动签名并做好转向Maven Central 。
 请注意这是一次性的操作，以后创建的每一个library都要应用此操作。
@@ -124,7 +124,7 @@ Bintray和Maven Central都已经准备好了！！！！
 Application Module用于展示库的用法</br>
 Library Module是library的源代码，也就是要发布到jcenter的library
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/14.png" />
+<img src="images/14.png" />
 
 
 ```groovy
