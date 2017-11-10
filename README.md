@@ -116,7 +116,7 @@ Update完密钥后就可以开启自动签名功能
 <img src="images/13.png" />
 
 点击Update保存这些步骤。完成。现在只需点击一下，每个上传到我们Maven仓库的东西都会自动签名并做好转向Maven Central 。
-请注意这是一次性的操作，以后创建的每一个library都要应用此操作。
+请注意这是一次性的操作，以后创建的每一个library都要应用此操作。</br>
 Bintray和Maven Central都已经准备好了！！！！
 
 
@@ -132,7 +132,7 @@ Library Module是library的源代码，也就是要发布到jcenter的library
     classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
     classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6"
 ```
-注：gradle、android-maven-gradle-plugin、gradle-bintray-plugin一定要对应匹配，否则会出现很多不可思议的bug
+注：gradle、android-maven-gradle-plugin、gradle-bintray-plugin一定要对应匹配版本号，否则会出现很多不可思议的bug
 
 ### local.properties添加如下：
 
@@ -140,10 +140,10 @@ Library Module是library的源代码，也就是要发布到jcenter的library
     bintray.apikey=YOUR_BINTRAY_API_KEY
     bintray.gpg.password=YOUR_GPG_PASSWORD
     
-local.properties文件一般被添加到.gitignore了，因此这些敏感数据不会被误传到git服务器
-*YOUR_BINTRAY_USERNAME* bintray账户登录名
-*YOUR_BINTRAY_API_KEY* API Key可以在Edit Profile页面的API Key 选项卡中找到
-*YOUR_GPG_PASSWORD* GPG key的密码
+local.properties文件一般被添加到.gitignore了，因此这些敏感数据不会被误传到git服务器</br>
+*YOUR_BINTRAY_USERNAME* bintray账户登录名</br>
+*YOUR_BINTRAY_API_KEY* API Key可以在Edit Profile页面的API Key 选项卡中找到</br>
+*YOUR_GPG_PASSWORD* GPG key的密码</br>
 
 ### 在Module Library的build.gradle中添加如下：
 ```groovy
@@ -198,7 +198,7 @@ gradle bintrayUpload
 
     compile 'com.github.eric0liang:lib_cardocr:0.9.3'
 
-在[Jcenter](http://jcenter.bintray.com)上检查library，在本例中就是[ttp://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/](http://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/
+在[Jcenter](http://jcenter.bintray.com)上检查library，在本例中就是http://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/
 <img src="images/19.png" />
 
 请注意链接到jcenter是一个只需做一次的操作。如果你对你的package做了任何修改，比如上传了一个新版本的binary，删除了旧版本的binary等等，这些改变也会影响到jcenter。不过毕竟你自己的仓库和jcenter在不同的地方，所以需要等待2－3分钟让jcenter同步这些修改。
