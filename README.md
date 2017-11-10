@@ -34,15 +34,15 @@ Maven Central 则是由sonatype.org维护的Maven仓库</br>
 
 第一步：在[bintray.com](https://bintray.com)上注册账号(有GitHub账号可以直接登录)，完成注册之后，登录网站，然后点击Add New Repository
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/1.png" width="600px"/>
+<img src="images/1.png" width="600px"/>
 
 第二步：点击Add New Package，为library创建一个新的package
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/2.png"/>
+<img src="https://github.com/Eric0liang/Android-library/blob/master/images/2.png"/>
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/3.png" width="500px"/>
+<img src="https://github.com/Eric0liang/Android-library/blob/master/images/3.png" width="500px"/>
 
-<img src="https://github.com/Eric0liang/Android-library/blob/master/4.png" />
+<img src="https://github.com/Eric0liang/Android-library/blob/master/images/4.png" />
 
 到这里Jcenter的Bintray账户的注册就完成了，并创建了Package。
 
