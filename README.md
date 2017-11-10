@@ -56,8 +56,8 @@ Group Id: 输入根GROUP_ID，比如，com.github.eric0liang 。一旦批准之�
 开始的library都允许被上传到仓库，比如com.github.eric0liang.lib。</br>
 Project URL: 输入任意一个你想贡献的library的URL，比如， https://github.com/Eric0liang/cardocr。</br>
 SCM URL: 版本控制的URL，比如 https://github.com/Eric0liang/cardocr.git。</br>
-<img src="https://github.com/Eric0liang/Android-library/blob/master/5.png" />
-<img src="https://github.com/Eric0liang/Android-library/blob/master/7.png" />
+<img src="images/5.png" />
+<img src="images/7.png" />
 点击Create后就是等待的审核时间，大概1个小时左右申请通过后，就有权限把library分享到Maven Central
 
 <img src="images/8.png" />
