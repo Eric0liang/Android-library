@@ -47,7 +47,7 @@ Maven Central 则是由sonatype.org维护的Maven仓库</br>
 到这里Jcenter的Bintray账户的注册就完成了，并创建了Package。
 
 ## 第二部分：为MavenCentral在Sonatype上创建账号
-需要在Sonatype Dashboard上申请个Issue权限，它的作用就是允许你上次匹配Maven Central提供的GROUP_ID的library</br>
+需要在[Sonatype Dashboard](https://issues.sonatype.org/secure/Dashboard.jspa)上申请个Issue权限，它的作用就是允许你上次匹配Maven Central提供的GROUP_ID的library</br>
 创建的帐号登录，然后点击顶部菜单的Create，填写信息如下：</br>
 Project: Community Support - Open Source Project Repository Hosting</br>
 Issue Type: New Project</br>
