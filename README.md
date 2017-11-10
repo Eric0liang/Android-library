@@ -1,5 +1,5 @@
 # 使用AS把Android library分享到jCenter和Maven Central
-原文地址 https://github.com/Eric0liang/Android-library
+原文地址 https://github.com/Eric0liang/Android-library/blob/master/README.md
 
 ## jCenter
 jcenter是一个由 bintray.com维护的Maven仓库</br>
