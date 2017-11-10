@@ -1,4 +1,4 @@
-# 如何使用Android Studio把自己的Android library分享到jCenter和Maven Central
+# 使用AS把Android library分享到jCenter和Maven Central
 
 ## jCenter
 jcenter是一个由 bintray.com维护的Maven仓库</br>
@@ -198,7 +198,7 @@ gradle bintrayUpload
 
     compile 'com.github.eric0liang:lib_cardocr:0.9.3'
 
-在[Jcenter](http://jcenter.bintray.com)上检查library，在本例中就是[http://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/](http://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/)
+在[Jcenter](http://jcenter.bintray.com)上检查library，在本例中就是[ttp://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/](http://jcenter.bintray.com/com/github/eric0liang/lib_cardocr/0.9.3/
 <img src="images/19.png" />
 
 请注意链接到jcenter是一个只需做一次的操作。如果你对你的package做了任何修改，比如上传了一个新版本的binary，删除了旧版本的binary等等，这些改变也会影响到jcenter。不过毕竟你自己的仓库和jcenter在不同的地方，所以需要等待2－3分钟让jcenter同步这些修改。
@@ -209,7 +209,7 @@ gradle bintrayUpload
 如果前面工作都准备好了，上传到Maven Central只是几秒钟的事情
 <img src="images/20.png" />
 
-上传成功后在[ Maven Central Repository](https://oss.sonatype.org/content/repositories/releases)上找到你上传的library，在本例中就是[https://oss.sonatype.org/content/repositories/releases/com/github/eric0liang/lib_cardocr/0.9.3/)
+上传成功后在[ Maven Central Repository](https://oss.sonatype.org/content/repositories/releases)上找到你上传的library，在本例中就是https://oss.sonatype.org/content/repositories/releases/com/github/eric0liang/lib_cardocr/0.9.3/
 <img src="images/21.png" />
 
 最后，虽然需要许多步骤，但是大部分操作都是一劳永逸的。
