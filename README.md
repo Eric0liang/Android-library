@@ -126,14 +126,71 @@ Library Module是library的源代码，也就是要发布到jcenter的library
 
 <img src="images/14.png" />
 
-
+### 在项目的build.gradle中添加bintray插件如下：
 ```groovy
-    compile 'cn.com.bluemoon:lib_cardocr:1.0.2'
+    classpath 'com.android.tools.build:gradle:2.2.1'
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+    classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6"
 ```
-### 依赖的jar添加到libs
-[fastjson.jar](https://github.com/Eric0liang/cardocr/blob/master/app/libs/fastjson-1.2.6.jar)
+注：gradle、android-maven-gradle-plugin、gradle-bintray-plugin一定要对应匹配，否则会出现很多不可思议的bug
 
-[BASE64Decoder.jar](https://github.com/Eric0liang/cardocr/blob/master/app/libs/sun.misc.BASE64Decoder.jar)
+### local.properties添加如下：
+
+    bintray.user=YOUR_BINTRAY_USERNAME
+    bintray.apikey=YOUR_BINTRAY_API_KEY
+    bintray.gpg.password=YOUR_GPG_PASSWORD
+    
+local.properties文件一般被添加到.gitignore了，因此这些敏感数据不会被误传到git服务器
+*YOUR_BINTRAY_USERNAME* bintray账户登录名
+*YOUR_BINTRAY_API_KEY* API Key可以在Edit Profile页面的API Key 选项卡中找到
+*YOUR_GPG_PASSWORD* GPG key的密码
+
+### 在Module Library的build.gradle中添加如下：
+```groovy
+apply plugin: 'com.android.library'
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'lib_cardocr'
+
+    publishedGroupId = 'com.github.eric0liang'
+    libraryName = 'LibCardocr'
+    artifact = 'lib_cardocr'
+
+    libraryDescription = 'idcard and bankcard ocr'
+
+    siteUrl = 'https://github.com/Eric0liang/cardocr'
+    gitUrl = 'https://github.com/Eric0liang/cardocr.git'
+
+    libraryVersion = '0.9.3'
+
+    developerId = 'ericliang'
+    developerName = 'Eric Liang'
+    developerEmail = 'youmail@email.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+apply from: 'https://raw.githubusercontent.com/Eric0liang/Android-library/master/maven/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/Eric0liang/Android-library/master/maven/bintrayv1.gradle'
+```
+
+bintrayName修改成你上面创建的 package name。其余的项也修改成和你library信息相匹配的值</br>
+publishedGroupId artifact libraryVersion 就是定义jcenter的引用路径
+```groovy
+compile 'com.github.eric0liang:lib_cardocr:0.9.3'
+```
+最后在文件的后面追加两行代码来应用两个脚本，用于构建library文件和上传文件到bintray</br>
+为了方便，我直接使用了github上连接到相关文件的链接，这两个脚本不用拷贝到项目，其他项目也可以直接引用
+### 上传编译的文件到bintray
+使用如下的命令：
+```groovy
+gradle bintrayUpload
+```
+
+在bintray查看上传的文件
+<img src="images/15.png" />
+
 
 ## demo apk下载地址: 
 [点击下载](https://github.com/Eric0liang/cardocr/blob/master/app-debug.apk)
