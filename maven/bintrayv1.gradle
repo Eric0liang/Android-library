@@ -10,6 +10,11 @@ if (project.hasProperty("android")) { // Android libraries
 
     task javadoc(type: Javadoc) {
         source = android.sourceSets.main.java.srcDirs
+        options {
+            encoding = "UTF-8"
+            charSet 'UTF-8'
+        }
+        options.addStringOption('Xdoclint:none', '-quiet')
         classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     }
 } else { // Java libraries
